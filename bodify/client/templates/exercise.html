@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Warm-Up Exercises</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff4ee;
+            text-align: center;
+        }
+        header {
+            background-color: #fff4ee;
+            color: #fff;
+            padding: 10px 0;
+        }
+        h1 {
+            margin: 0;
+        }
+        #exercise-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff4ee
+;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+            img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color: #e5935c;background-color: #fff4ee;">RECOMMENDED EXERCISES</h1>
+    </header>
+    <div id="exercise-container">
+        <h2 style="color: #e5935c;">Exercise 1: {{exercise.exercise1}}</h2>
+         
+        <p>{{exercise.desc1}}</p>
+        <img src="/media/{{exercise.image1}}">
+
+        <h2 style="color: #e5935c;">{{exercise.exercise2}}</h2>
+        <p>{{exercise.desc2}}</p>
+        <img src="/media/{{exercise.image2}}" alt="Arm Circles Image">
+        
+        <h2 style="color: #e5935c;">{{exercise.exercise3}}</h2>
+        <p>{{exercise.desc3}}</p>
+        <img src="/media/{{exercise.image3}}" alt="Arm Circles Image">
+        
+
+        <!-- Add more exercises as needed -->
+
+    </div>
+</body>
+</html>

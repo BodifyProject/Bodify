@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BODIFY</title>
+    <link rel="stylesheet" href="{% static 'client/homePage/css/styles.css' %}">
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+          <img src="{% static 'client/homePage/images/Property.png' %}" class="logo">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Store</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="auth/">Profile</a></li>
+          </ul>
+        </div>
+        <div class="content">
+            <h1>SURPASS  YOUR LIMITS<br> AND GET TO THE<br>NEXT LEVEL</h1>
+                <p>"Welcome to Bodify, your ultimate destination for fitness and well-being. Our mission is to<br> empower you to transform your body, elevate your life, and unlock your full potential. At<br> Bodify, we understand that your fitness journey is unique, and that's why we're here<br> to support you every step of the way."</p>
+                <div>
+                    <a href="/partSelection"><button type="button"><span></span>GET STARTED</button></a>
+                   </div>
+            </div>
+            
+    </div>
+    
+</body>
+</html>

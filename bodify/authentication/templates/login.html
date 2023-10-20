@@ -1,0 +1,48 @@
+   <!-- loading static files -->
+   {% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login to BODIFY</title>
+  <link rel="stylesheet" href="{% static 'login/styles.css' %}">
+</head>
+<body>
+  <div class="container">
+    <div class="title-line">
+      <h3 class="title">Welcome to</h3>
+      <h1 class="site-name">BODIFY</h1>
+      <p class="quote">"Unlock Your Potential with Bodify."</p>
+    </div>
+    <div class="form">
+      <form id="login-form" action="#" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <button type="submit" class="submit">Sign In</button>
+        <div class="row">
+          <p>Not Yet Registered? <a href="/auth">Sign Up</a></p>
+          <p><a href="#">Forgot Password?</a></p>
+        </div>
+        <p id="error" class="error"></p>
+      </form>
+    </div>
+    <div class="last">
+      <a href="#">Terms &amp; Conditions</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+
+  <!-- Include JavaScript at the end of the body -->
+  <script src="{% static 'login/script.js' %}"></script>
+</body>
+</html>
