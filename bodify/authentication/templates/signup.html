@@ -56,5 +56,12 @@
 
   <!-- Include JavaScript at the end of the body -->
   <script src="{% static 'login/script.js' %}"></script>
+
+  {% for message in messages %}
+  <script>
+    alert("{{message}}");
+  </script>
+  {% endfor %}
+
 </body>
 </html>

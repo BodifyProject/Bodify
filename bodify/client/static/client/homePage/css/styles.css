@@ -22,6 +22,8 @@
     width: 150px;
     cursor: pointer;
 }
+
+
 .navbar ul li{
     list-style: none;
     display: inline-block;
@@ -30,8 +32,8 @@
 }
 .navbar ul li a{
     text-decoration: none;
-color: #fff;
-text-transform: uppercase;
+    color: #fff;
+    text-transform: uppercase;
 }
 .navbar ul li::after{
     content:'';
@@ -46,6 +48,7 @@ text-transform: uppercase;
 .navbar ul li:hover::after{
     width: 100%;
 }
+
 .content{
     width: 100%;
     position: absolute;

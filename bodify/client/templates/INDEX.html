@@ -7,13 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BODIFY</title>
     <link rel="stylesheet" href="{% static 'client/homePage/css/styles.css' %}">
+
+    <style>
+      .active{
+        color:#df5320;
+    }
+    </style>
+
+
 </head>
 <body>
     <div class="banner">
         <div class="navbar">
           <img src="{% static 'client/homePage/images/Property.png' %}" class="logo">
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="#"  class="active" >Home</a></li>
             <li><a href="#">Store</a></li>
             <li><a href="#">Blogs</a></li>
             <li><a href="#">About Us</a></li>
@@ -31,5 +39,11 @@
             
     </div>
     
+    {% for message in messages%}
+    <script>
+      alert("{{message}}");
+    </script>
+    {% endfor %}
+
 </body>
 </html>

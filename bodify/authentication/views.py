@@ -54,13 +54,33 @@ def auth(request):
 
             if user is not None:
                 login(request, user)
-                # messages.success(request,"Logged in !")
+                messages.success(request,"Logged in !")
                 return redirect("/")
                 # login(request, myuser)
 
 
     return render(request, 'signup.html')
 
-
 def loginAuth(request):
+
+    if request.method=="POST":
+        username=request.POST.get("username")
+        password=request.POST.get("password")
+
+        user=authenticate(username=username, password=password)         
+        #this will return a not none value is the user is authenticate otherwise it returns none if the user have entered the wrong credentials"""
+
+        
+        if user is not None:
+            login(request, user)
+            messages.success(request,"Logged in !")
+            myuser=User.objects.filter(username=username)
+            # fname= myuser.first_name
+            return redirect("/")
+            
+
+        else:
+            messages.error(request, "Wrong Credentials")
+
     return render(request, 'login.html')
+
