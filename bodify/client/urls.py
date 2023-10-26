@@ -22,5 +22,6 @@ urlpatterns = [
     path('', views.home, name="home"),
     path('partSelection/', views.partSelection, name="partSelection"),
     path('exercisesView/<str:exercise>', views.exercisesView, name="exercisesView"),
+    path('profile/', views.profile, name="profile"),
     
 ]

@@ -12,3 +12,6 @@ def partSelection(request):
 def exercisesView(request, exercise):
     exerciseDetails = exercises.objects.get(part_name = exercise)
     return render(request, 'exercise.html',{'exercise': exerciseDetails})
+
+def profile(request):
+    return render(request, 'profile.html')
